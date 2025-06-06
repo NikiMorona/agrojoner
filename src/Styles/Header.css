@@ -1,0 +1,83 @@
+
+  .site-header {
+    background-color: #93bf20;
+    padding: 10px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1px;
+    padding-right: 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .btn-contato {
+    background-color: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .btn-contato i {
+    color: black;
+  }
+#icon-menu-responsive{
+display: none;
+
+
+}
+
+  @media screen and (max-width: 767px){
+
+.menu, .btn-contato{
+  display: none;
+
+
+}
+.container{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+.logo{
+
+
+
+}
+#icon-menu-responsive{
+display: flex;
+position: relative;
+left: 80px;
+font-size: 30px;
+color: white;
+}
+
+
+
+
+
+
+
+  }
+  
