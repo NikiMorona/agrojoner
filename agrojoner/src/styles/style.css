@@ -1,0 +1,32 @@
+@import url("Header.css");
+@import url("carrossel.css");
+@import url("fornecedores.css");
+@import url("produtos.css");
+@import url("aloisio.css");
+@import url("sobre-nos.css");
+@import url("contato.css");
+@import url("footer.css");
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Century Bold, sans-serif;
+  background-color: #fce9c460;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+.links{
+  color: white;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "century-gothic";
+  src: url("./fonts/CenturyGothic.ttf") format("truetype");
+}

@@ -1,0 +1,192 @@
+.inicio {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  position: relative; /* Essencial para posicionar a camada da frente */
+  background-size: cover;
+  background-position: center;
+  /* Define uma cor de fundo para evitar qualquer "piscada" durante o carregamento */
+  background-color: #111;
+}
+
+/* Camada da Frente (invisível no início) */
+.inicio::before {
+  content: ""; /* Obrigatório para pseudo-elementos */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Oculta por padrão */
+  opacity: 0;
+
+  /* Define a animação suave de fade */
+  transition: opacity 1.5s ease-in-out;
+
+  /* Estilos do fundo que serão aplicados à nova imagem */
+  background-size: cover;
+  background-position: center;
+
+  /* A imagem de fundo será controlada pelo JavaScript */
+  background-image: var(--bg-image-frente);
+}
+
+/* Classe que será adicionada via JS para ativar o fade-in da camada da frente */
+.inicio.fade-in::before {
+  opacity: 1;
+}
+
+/* Garante que o conteúdo de texto fique sempre por cima das camadas de fundo */
+.esquerda,
+.direita {
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo acima das camadas de fundo */
+}
+/* Estilização da coluna da esquerda */
+.esquerda {
+  /* Define que a coluna da esquerda ocupará 50% da largura */
+  flex-basis: 50%;
+
+  /* Cor de fundo com transparência para criar o efeito de sobreposição */
+  /* O valor 0.8 define o nível de transparência */
+
+  /* Usamos Flexbox novamente para centralizar o conteúdo verticalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+  margin-top: 150px;
+  /* Alinha os itens em coluna */
+}
+
+/* Define uma largura máxima para o bloco de textos */
+.textos {
+  max-width: 80%;
+}
+
+/* Estilização do título principal H1 */
+.esquerda h1 {
+  color: #a5da18; /* Cor verde-claro */
+  font-size: 60px; /* Tamanho da fonte (rem é uma unidade relativa) */
+  margin-bottom: 0;
+  font-family: "century-gothic";
+  font-weight: bolder; /* Remove a margem inferior */
+}
+
+/* Estilização do subtítulo H6 */
+.esquerda h6 {
+  color: white; /* Cor branca */
+  font-size: 27px;
+  margin-top: 10px;
+  font-weight: 500; /* Deixa a fonte menos "negrito" */
+}
+
+/* Estilização da linha decorativa */
+.line {
+  width: 260px; /* Largura da linha */
+  height: 6px; /* Altura da linha */
+  background-color: #a5da18; /* Cor verde-claro */
+  margin: 15px 0;
+  border-radius: 10px;
+  position: relative;
+  bottom: 13px; /* Margem para dar espaço acima e abaixo */
+}
+
+/* Estilização do parágrafo */
+.esquerda p {
+  color: white; /* Cor branca */
+  font-size: 15px;
+  line-height: 1.6;
+
+  font-weight: lighter;
+  font-family: "Poppins", sans-serif; /* Espaçamento entre as linhas do texto */
+}
+
+/* Estilização do botão */
+.esquerda button {
+  background-color: #a5da18; /* Cor de fundo verde-claro */
+  color: #ffffff; /* Cor do texto (o mesmo azul escuro do fundo) */
+  border-radius: 8px;
+  letter-spacing: 1px;
+  border: none; /* Remove a borda padrão */
+  padding: 15px 30px; /* Espaçamento interno (vertical e horizontal) */
+  font-size: 1rem;
+  font-weight: bold; /* Deixa o texto em negrito */
+  cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar por cima */
+  margin-top: 20px; /* Margem no topo para separar do parágrafo */
+  transition: background-color 0.3s; /* Efeito suave de transição na cor */
+}
+
+/* Efeito para quando o mouse passa por cima do botão */
+.esquerda button:hover {
+  background-color: #9eca25; /* Um tom de verde um pouco mais forte */
+}
+
+.texto-inicio-desc {
+  color: black !important;
+}
+
+.texto-inicio {
+  padding: 0.8em;
+  background-color: white;
+  border-radius: 4%;
+}
+/* Estilização da coluna da direita */
+.direita {
+  /* Define que a coluna da direita ocupará os 50% restantes da largura */
+  flex-basis: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .inicio {
+    flex-direction: column;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .esquerda,
+  .direita {
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  .textos {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .esquerda h1 {
+    font-size: 40px;
+  }
+
+  .esquerda h6 {
+    font-size: 20px;
+  }
+
+  .line {
+    width: 150px;
+    height: 4px;
+    margin: 10px auto;
+  }
+
+  .esquerda p {
+    font-size: 14px;
+  }
+
+  .esquerda button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .texto-inicio {
+    padding: 1em;
+    border-radius: 8px;
+  }
+
+  .direita {
+    display: none; /* esconde a direita no mobile (caso não tenha conteúdo ainda) */
+  }
+}

@@ -1,0 +1,166 @@
+      .containerr {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding-left: 75px;
+            padding-right: 75px;
+            margin-top: 50px;
+        }
+        .produtos{
+            height: 800px;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bolder;
+            color: #252525;
+            margin-bottom: 40px;
+            text-align: left;
+            margin-left: 60px;
+            font-family: "century-gothic";
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+            #h01{
+                border: none;
+                background-color: #8BC34A;
+
+            }
+            .card-title{
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                justify-content: center;
+                justify-items: center;
+            }
+            .card-title hr{
+                border: none;
+                padding: 2px;
+                width: 100%;
+                background-color: #8FB426;
+            }
+        .card {
+            width: 100%;
+            max-width: 300px;
+            height: 420px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+       
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+            z-index: 1;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            color: white;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-button {
+            background-color: #8FB426;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .card-button:hover {
+            background-color: #7CB342;
+            transform: scale(1.02);
+        }
+
+        .card-ferramentas {
+            background-image: url('products/ferramentas.png');
+        }
+
+        .card-racoes {
+            background-image: url('products/racoes.png');
+        }
+
+        .card-mudas {
+            background-image: url('products/mudas.png');
+        }
+
+        .card-jardinagem {
+            background-image: url('products/jardinagem.png');
+        }
+
+        @media (max-width: 768px) {
+            .title {
+              font-size: 2rem;
+              text-align: center;
+              margin-left: 0;
+            }
+          
+            .cards-container {
+              grid-template-columns: 1fr; /* deixa um card por linha */
+              gap: 30px;
+            }
+            .card-content{
+                margin-top: -20px;
+            }
+            
+          .card-button{
+            position: relative;
+            left: -0px;
+            width: 155px;
+            
+          }
+          #hr01{
+            width: 85%;
+            position: relative;
+            left: 10px;
+          }
+            .card {
+              max-width: 100%; /* ocupa a largura toda disponível */
+              height: 420px;
+            }
+          
+            .card-title {
+              font-size: 1.5rem;
+            }
+          }
+          

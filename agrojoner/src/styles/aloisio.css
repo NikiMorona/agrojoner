@@ -1,0 +1,166 @@
+.aloisio-joner {
+  margin-top: -150px;
+  padding: 60px 20px;
+  background: #fce9c41a;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+/* Imagem e nome */
+.imagem-container {
+  width: 300px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.nome-acima {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 8px 12px;
+  z-index: 2;
+  font-family: "century-gothic";
+}
+
+.imagem-container img {
+  width: 120%;
+  display: block;
+  border-radius: 0 0 60px 0;
+  border: 8px solid #93bf20;
+}
+
+/* Caixa de texto */
+.texto-container {
+  position: relative;
+  background-color: #fff;
+  width: 480px;
+  min-height: 400px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Faixa no canto superior direito */
+.linha-verde-canto {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 100px;
+  height: 4px;
+  background-color: #93bf20;
+  z-index: 3;
+}
+.linha-verde-canto::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100px;
+  background-color: #93bf20;
+}
+
+/* Conteúdo de texto */
+.conteudo-texto {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.conteudo-texto h2 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  color: #000;
+  font-family: "century-gothic";
+}
+.conteudo-texto h2 strong {
+  display: inline-block;
+  font-size: 24px;
+  color: #000;
+}
+.conteudo-texto p {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Faixa verde embaixo */
+.faixa-verde-baixo {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.faixa-verde-baixo::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #93bf20;
+  border-top-left-radius: 100% 60px;
+  border-top-right-radius: 100% 60px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .imagem-container img {
+    width: 100%;
+  }
+
+  .texto-container {
+    width: 100%;
+  }
+
+  .imagem-container {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo-texto h2 {
+    font-size: 20px;
+  }
+
+  .conteudo-texto p {
+    font-size: 16px;
+  }
+
+  .nome-acima {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .linha-verde-canto {
+    width: 60px;
+  }
+
+  .linha-verde-canto::after {
+    height: 60px;
+  }
+
+  .texto-container {
+    min-height: auto;
+  }
+
+  .aloisio-joner {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,157 @@
+/* Footer principal */
+footer {
+  margin-top: 200px;
+}
+.footer-joner-exato {
+  background-color: #93bf20;
+  padding: 25px 0;
+  position: relative;
+}
+
+.footer-container-exato {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.footer-coluna {
+  flex: 1;
+}
+
+.footer-coluna h3 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.footer-coluna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-coluna li {
+  margin-bottom: 8px;
+}
+
+.footer-coluna a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footer-coluna a:hover {
+  opacity: 1;
+}
+
+/* Logo central */
+.footer-logo-centro {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.footer-logo-centro img {
+  width: 200px;
+  height: auto;
+}
+
+/* Botão WhatsApp flutuante - EXATAMENTE como na imagem */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-flutuante img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 200px;
+  }
+  .endereço {
+    margin-top: 70px;
+  }
+
+  .sobre-nos {
+    margin-top: 200px;
+  }
+
+  .aloisio-joner {
+    margin-top: 1400px;
+  }
+
+  .footer-container-exato {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-logo-centro {
+    order: -1;
+    margin: 0 0 20px 0;
+  }
+
+  .footer-logo-centro img {
+    width: 150px;
+  }
+
+  .whatsapp-flutuante {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-flutuante img {
+    width: 60px;
+    height: 60px;
+  }
+  .footer-container-exato {
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Conteúdo da página para demonstração */
+.conteudo-pagina {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}

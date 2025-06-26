@@ -1,0 +1,103 @@
+.sobre-nos {
+  position: relative;
+  bottom: 90px;
+  padding: 60px 20px;
+  background-color: #f9f9f900;
+  margin-top: 150px;
+}
+
+.container02 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-box img {
+  width: 493px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0);
+}
+
+.text-box {
+  background-color: #2e2676;
+  color: white;
+  padding: 40px;
+  border-radius: 0px;
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title-box h3 {
+  font-size: 26px;
+  margin: 0;
+  font-family: "century-gothic";
+}
+
+.title-box hr {
+  border: 2px solid white;
+  width: 60px;
+  margin: 0;
+}
+
+.text-box p {
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1024px) {
+  .container02 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .logo-box,
+  .text-box {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text-box {
+    padding: 20px;
+  }
+
+  .title-box h3 {
+    font-size: 22px;
+  }
+
+  .text-box p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-box {
+    padding: 20px;
+    position: relative;
+    top: 25px;
+  }
+
+  .logo-box img {
+    width: 200px;
+  }
+}

@@ -1,0 +1,96 @@
+.site-header {
+  background-color: #93bf20;
+  padding: 10px 0;
+}
+
+.container01 {
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 70px;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.877);
+  font-weight: 550;
+  letter-spacing: 1px;
+  font-size: 21px;
+}
+
+.menu a:hover {
+  color: rgba(241, 255, 235, 0.753);
+  transition: 500ms;
+}
+
+.btn-contato {
+  background-color: white;
+  color: black;
+  padding: 17px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-contato:hover {
+  background-color: #d1fc66;
+  transition: 500ms;
+}
+
+.btn-contato i {
+  color: black;
+}
+
+#icon-menu-responsive {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #93bf20;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .btn-contato {
+    display: none;
+  }
+
+  #icon-menu-responsive {
+    display: block;
+  }
+
+  .container01 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
