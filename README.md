@@ -41,7 +41,7 @@ A **Joner Agroutilidades** é uma empresa familiar fundada em 2017, em homenagem
 ## 👨‍🏫 Informações Acadêmicas
 
 - **Curso:** Análise e Desenvolvimento de Sistemas (ADS)  
-- **Instituição:** BioPark - aculdade Donaduzzi  
+- **Instituição:** BioPark - Faculdade Donaduzzi  
 - **Data:** Junho de 2025  
 - **Grupo 9:**  
   - Daniel Feliciano Vieira Brandão  
