@@ -1,4 +1,4 @@
-@import url("Header.css");
+@import url("header.css");
 @import url("carrossel.css");
 @import url("fornecedores.css");
 @import url("produtos.css");
@@ -6,10 +6,10 @@
 @import url("sobre-nos.css");
 @import url("contato.css");
 @import url("footer.css");
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,9 +19,9 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-.links{
+  scroll-behavior: smooth;
+}
+.links {
   color: white;
   text-decoration: none;
 }
