@@ -5,7 +5,7 @@ Site estático desenvolvido como trabalho acadêmico, com foco em uma empresa re
 ## 📌 Link do Site
 
 Acesse o site publicado pelo GitHub Pages:  
-➡️ [https://SEU-USUÁRIO.github.io/NOME-DO-REPOSITÓRIO](https://SEU-USUÁRIO.github.io/NOME-DO-REPOSITÓRIO)
+➡️ [Agrojoner](https://nikimorona.github.io/agrojoner/)
 
 ---
 
